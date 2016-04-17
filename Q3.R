@@ -141,7 +141,7 @@ trip.zip <- trip.zip %>%
 plot.zip.1 <- ggplot(data=filter(trip.zip, count > 30), aes(x=factor(zip), y=count)) + 
   geom_bar(stat = "identity") + 
   scale_x_discrete(limits=unique(filter(trip.zip, count > 30)$zip)) +
-  title_with_subtitle("Trip count for each Zip", 'A trip between two Zips counts as 0.5 for each Zip') +
+  title_with_subtitle("Trip count for each Zip in Austin, TX", 'A trip between two Zips counts as 0.5 for each Zip') +
   labs(x="Zipcode", y="Count") +
   theme_tws(base_size = 20) + theme(legend.position=c(0.9, 0.5))
 
